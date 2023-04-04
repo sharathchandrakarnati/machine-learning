@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>BOSTON HOUSE PRICE PREDICTION</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='wine.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">BOSTON HOUSE PRICE PREDICTION</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="CRIM" placeholder="CRIM eg. 0.00632"><br>
+                <input class="form-input" type="text" name="ZN" placeholder="ZN eg.18.0"><br>
+                <input class="form-input" type="text" name="INDUS" placeholder="INDUS eg.2.31"><br>
+                <input class="form-input" type="text" name="CHAS" placeholder="CHAS eg.0.0 or 1.0"><br>
+                <input class="form-input" type="text" name="NOX" placeholder="NOX. 0.538"><br>
+                <input class="form-input" type="text" name="RM" placeholder="RM eg.6.575"><br>
+                <input class="form-input" type="text" name="AGE" placeholder="AGE eg. 78.9"><br>
+                <input class="form-input" type="text" name="DIS" placeholder="DIS eg. 4.0900"><br>
+                <input class="form-input" type="text" name="RAD" placeholder="RAD eg. 1.0"><br>
+                <input class="form-input" type="text" name="TAX" placeholder="TAX eg. 296.0"><br>
+                <input class="form-input" type="text" name="PTRATIO" placeholder="PTRATIO eg. 16.3"><br>
+                <input class="form-input" type="text" name="B" placeholder="B eg. 396.0"><br>
+                <input class="form-input" type="text" name="LSTAT" placeholder="LSTAT eg.4.98"><br>
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+              
+           </div>
+           
+       </div>
+
+    </body>
+</html>
+
